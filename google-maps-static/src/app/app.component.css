@@ -1,4 +1,60 @@
-google-map {
-  height: 100%;
+/* app.component.css */
+
+/* Asegúrate de que el contenedor del mapa ocupe el 100% del ancho y altura disponible */
+.map-container {
   width: 100%;
+  height: 500px;
+  max-width: 100%;
+}
+
+/* Haz que el contenedor principal sea un flex container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Cambiado a flex-start para alinear elementos a la izquierda */
+  padding: 10px;
+}
+
+/* Haz que el botón sea más pequeño y responsive */
+button {
+  width: 100px; /* Ajusta el ancho del botón */
+  margin: 10px 0; /* Margen superior e inferior para espaciar el botón del mapa */
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Ajusta el contenedor del mapa y el botón para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .map-container {
+    height: 300px;
+  }
+
+  button {
+    width: 80px; /* Ajusta el ancho del botón para pantallas pequeñas */
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+/* Ajusta el botón para dispositivos muy pequeños */
+@media (max-width: 480px) {
+  .map-container {
+    height: 200px;
+  }
+
+  button {
+    width: 60px; /* Ajusta el ancho del botón para dispositivos muy pequeños */
+    font-size: 10px;
+    padding: 4px;
+  }
 }

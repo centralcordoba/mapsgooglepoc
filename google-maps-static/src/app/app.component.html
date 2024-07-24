@@ -1,7 +1,10 @@
-<div style="height: 500px;">
-  <google-map [center]="center" [zoom]="zoom" [options]="mapOptions">
-    <map-marker [position]="barranquitasCoordinates" [label]="'A'" (mapClick)="markerClicked(barranquitasCoordinates)"></map-marker>
-    <map-marker [position]="adjuntasCoordinates" [label]="'B'" (mapClick)="markerClicked(adjuntasCoordinates)"></map-marker>
-  </google-map>
+<!-- app.component.html -->
+<div class="container">
+  <div class="map-container">
+    <google-map [center]="center" [zoom]="zoom" [options]="mapOptions">
+      <map-marker [position]="barranquitasCoordinates" [label]="'A'" (mapClick)="markerClicked(barranquitasCoordinates)"></map-marker>
+      <map-marker [position]="adjuntasCoordinates" [label]="'B'" (mapClick)="markerClicked(adjuntasCoordinates)"></map-marker>
+    </google-map>
+  </div>
+  <button (click)="resetMap()">Reset Map</button>
 </div>
-<button (click)="resetMap()">Reset Map</button>
